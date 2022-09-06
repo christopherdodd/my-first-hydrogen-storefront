@@ -1,7 +1,7 @@
 import { Link, Image, Money } from "@shopify/hydrogen";
 
 export default function ProductCard({ product }) {
-    console.log(product);
+    // console.log(product);
 
     const { priceV2: price, compareAtPriceV2: compareAtPrice } =
     product.variants?.nodes[0] || {};
@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
     const isDiscounted = compareAtPrice?.amount > price?.amount;
 
     const imageAspectRatio = product.featuredImage.width / product.featuredImage.height;
-    console.log(imageAspectRatio);
+    // console.log(imageAspectRatio);
 
     return (
         <div className="product-grid-item">

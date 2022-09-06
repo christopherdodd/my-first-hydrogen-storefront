@@ -6,7 +6,6 @@ import {
   import {Suspense} from 'react';
   
   import Layout from '../../components/Layout.server';
-  import NotFound from '../../components/NotFound.server';
   
   export default function Page({params}) {
   

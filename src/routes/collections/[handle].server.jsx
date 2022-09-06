@@ -1,4 +1,4 @@
-import { useShopQuery, useRouteParams, gql } from "@shopify/hydrogen";
+import { Seo, useShopQuery, useRouteParams, gql } from "@shopify/hydrogen";
 import { Suspense } from "react";
 import { Layout } from "../../components/Layout.server";
 import ProductGridItem from '../../components/ProductGridItem.server';
@@ -13,16 +13,15 @@ export default function Collection() {
         }
   });
 
-  const { data: { collection: { products : { nodes } } } } = data;
-
-  const products = nodes;
+  const { data: { collection } } = data;
 
   return (
     <Layout>
       <Suspense>
+        <Seo type="collection" data={collection} />
         <div className="container">
             <div className="product-grid">
-                {products.map((product) => (
+                {collection.products.nodes.map((product) => (
                         <ProductGridItem key={product.id} product={product} />
                     )
                 )}
