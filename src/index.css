@@ -3,15 +3,16 @@
     --light-border: #f2f2f7;
     --light-background: #fafafc;
     --product-item-padding: 15px;
+    --standard-font-size: 19px;
   }
 
 body {
     margin: 0;
     padding: 0;
+    font-size: var(--standard-font-size);
 }
 
 .container {
-    width: 100%;
     padding-right: var(--padding);
     padding-left: var(--padding);
     margin-right: auto;
@@ -26,6 +27,7 @@ header {
 .header-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .header-navigation {
     display: flex;
@@ -49,6 +51,10 @@ header {
     text-decoration: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: black;
+}
+.header-cart-link svg {
+    height: var(--standard-font-size);
+    width: auto;
 }
 main {
     background: var(--light-background);
