@@ -35,7 +35,9 @@ import {
         <Suspense>
           <Seo type="product" data={product} />
         </Suspense>
-        <ProductDetails product={product} />
+        <div className="product-page container">
+            <ProductDetails product={product} />
+        </div>
       </Layout>
     );
   }

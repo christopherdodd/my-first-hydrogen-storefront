@@ -72,3 +72,12 @@ main {
 .image-container {
     display: block;
 }
+.product-page {
+    display: grid;
+    grid-template-columns: minmax(400px,560px) minmax(350px,480px);
+}
+.product-page-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
