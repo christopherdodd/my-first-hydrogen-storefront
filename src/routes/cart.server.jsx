@@ -1,14 +1,12 @@
-import { Suspense } from "react";
 import { Layout } from "../components/Layout.server";
+import CartPage from "../components/CartPage.client";
 
 export default function Cart() {
   return (
     <Layout>
-      <Suspense>
-        <div className="container">
-          <div>Cart Page</div>
-        </div>
-      </Suspense>
+      <div className="container">
+          <CartPage />
+      </div>
     </Layout>
   );
 }

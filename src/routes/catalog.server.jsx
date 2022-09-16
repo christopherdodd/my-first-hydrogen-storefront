@@ -18,7 +18,7 @@ export default function Catalog() {
   return (
     <Layout>
       <Suspense>
-        <div className="container">
+        <div className="catalog-page container">
             <div className="product-grid">
                 {products.map((product) => (
                         <ProductGridItem key={product.id} product={product.node} />
